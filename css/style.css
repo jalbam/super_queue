@@ -1,0 +1,1249 @@
+/*
+	Super Queue
+	* Chinese translation: 董双丽
+	* Graphics: 乔安
+	* Code: Joan Alba Maldonado
+*/
+
+
+/* BODY element: */
+body
+{
+	overflow:hidden;
+	background-image:url('../img/general_background.jpg');
+	/*
+	-moz-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	*/
+}
+
+
+/* DIV for displaying errors: */
+#errors
+{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:20%;
+
+	border:2px solid #aaaa00;
+	background-color:#aa0000;
+
+	font-size:12px;
+	color:#ffffff;
+	font-family:arial;
+
+	z-index:10;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+
+/* TABLE which contains waiting messages: */
+#wait
+{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+
+	display:table;
+
+	text-shadow:2px 2px 2px #666666;
+
+	z-index:9;
+}
+
+
+/* TD which contains waiting messages: */
+#wait td
+{
+	font-size:28px;
+	color:#ffffff;
+	font-family:arial;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+
+/* TABLE which contains the message for recommending landscape mode: */
+#landscape_mode
+{
+	position:fixed;
+	left:0px;
+	bottom:10px;
+	width:100%;
+	display:table;
+
+	text-shadow:2px 2px 2px #666666;
+
+	z-index:99;
+}
+
+
+/* TD  which contains the message for recommending landscape mode: */
+#landscape_mode td
+{
+	font-size:28px;
+	color:#ffffff;
+	font-family:arial;
+	text-align:center;
+	vertical-align:bottom;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+
+/* TABLE which contains registration form: */
+#registration_form_container
+{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+
+	background-color:#0000aa;
+
+	text-align:center;
+
+	z-index:2;
+}
+
+
+/* TD which contains registration form: */
+.registration_form_td
+{
+	font-size:22px;
+	color:#aa0000;
+	font-family:arial;
+	text-align:center;
+	vertical-align:middle;
+}
+
+
+/* Input texts and button from registration form: */
+.registration_form_input, .registration_form_button, .user_name_selector
+{
+	color:#000000;
+	font-family:verdana;
+	font-size:12px;
+	height:30px;
+	width:100%;
+	border:1px solid #cc55aa;
+	background-color:#ffaabb;
+	padding:6px;
+}
+
+.registration_form_input:hover, .registration_form_button:hover, .user_name_selector:hover
+{
+	background-color:#ff66cc;
+}
+
+.user_name_selector
+{
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+/* Button from registration form: */
+.registration_form_button
+{
+	width:20%;
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+/* Radio buttons from registration form: */
+.registration_form_radio
+{
+	position:absolute; left:-20px; top:-20px; /* Hides the ugly radio buttons! */
+	color:#cc33aa;
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+.registration_form_radio:hover
+{
+	color:#dd33dd;
+}
+
+
+#registration_form_male_image, #registration_form_female_image
+{
+	position:inline;
+
+	width:60px;
+	height:60px;
+	cursor:hand;
+	cursor:pointer;
+	border:5px dashed #cc66dd;
+
+	border-radius:12px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	-khtml-border-radius:12px;
+
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+
+#registration_form_male_image:hover, #registration_form_female_image:hover, #registration_form_male_image.selected, #registration_form_female_image.selected
+{
+	border:5px solid #dd77ff;
+
+	filter:alpha(opacity=100);
+	opacity:1;
+	-moz-opacity:1;
+	-khtml-opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+/* DIV for displaying registration form  errors: */
+#registration_form_errors
+{
+	width:100%;
+
+	padding:10px;
+	margin-bottom:10px;
+	
+	border:2px solid #aaaa00;
+	background-color:#00aaaa;
+
+	font-size:12px;
+	color:#ffffff;
+	font-family:arial;
+
+	z-index:2;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+
+/* DIV that contains the message with the host user in registration form: */
+#host_user_container
+{
+	font-size:12px;
+	color:#ddddff;
+	font-family:verdana;
+}
+
+
+/* SPAN that contains the host user in registration form: */
+#host_user
+{
+	font-size:14px;
+	color:#00aaaa;
+	font-family:verdana;
+	font-weight:bold;
+}
+
+
+/* Container for all screens:; */
+#screens_container
+{
+	filter:alpha(opacity=100);
+	opacity:1;
+	-moz-opacity:1;
+	-khtml-opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Class to make a screen appear: */
+#screens_container.screen_hidden
+{
+	filter:alpha(opacity=0);
+	opacity:0;
+	-moz-opacity:0;
+	-khtml-opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Container for the queue screen: */
+#queue_screen
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:red;
+	z-index:3;
+
+	overflow:hidden;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+#queue_screen.screen_hidden
+{
+	left:100%;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Button to close the instructions: */
+#queue_instructions_close_button, #lottery_room_instructions_close_button
+{
+	position:absolute;
+	top:2px;
+	right:2px;
+	font-size:20px;
+	color:#000000;
+	font-family:arial;
+	text-shadow:2px 2px 2px #666666;
+	border:1px solid #000000;
+	width:30px;
+	height:30px;
+	padding:0px;
+}
+
+#queue_instructions_close_button:hover, #lottery_room_instructions_close_button:hover
+{
+	color:#ff0000;
+	border:1px solid #ffffff;
+	background-color:#000000;
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+/* Instructions for the screens: */
+#queue_instructions, #lottery_room_instructions
+{
+	position:fixed;
+	border:1px solid blue;
+	background-color:#ffffff;
+
+	top:1%;
+	left:5%;
+
+	z-index:4;
+
+	width:88%;
+
+	padding:1%;
+
+	overflow:hidden;
+
+	text-align:center;
+
+	font-size:16px;
+	color:#333333;
+	font-family:arial;
+
+	-moz-box-shadow:1px 1px 6px 1px #000000;
+	-webkit-box-shadow:1px 1px 6px 1px #000000;
+	-o-box-shadow:1px 1px 6px 1px #000000;
+	-khtml-box-shadow:1px 1px 6px 1px #000000;
+	box-shadow:1px 1px 6px 1px #000000;
+
+	border-top-left-radius:12px;
+	-moz-border-radius-topleft:12px;
+	-moz-border-top-left-radius:12px;
+	-webkit-border-top-left-radius:12px;
+	-khtml-border-top-left-radius:12px;
+
+	border-bottom-right-radius:12px;
+	-moz-border-radius-bottomright:12px;
+	-moz-border-bottom-right-radius:12px;
+	-webkit-border-bottom-right-radius:12px;
+	-khtml-border-bottom-right-radius:12px;
+
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+
+/* Text with share link ("Share link"): */
+#share_link
+{
+	color:#000000;
+	text-shadow:2px 2px 2px #666666;
+	font-size:10px;
+	font-family:verdana;
+	font-weight:bold;
+}
+
+
+/* Url in share link: */
+.share_link_url
+{
+	font-weight:normal;
+}
+
+
+/* List of winners: */
+#winners_list
+{
+	position:absolute;
+	border:1px solid blue;
+	background-color:#aa00aa;
+
+	top:20%;
+	right:1%;
+
+	min-width:21%;
+	max-width:60%;
+
+	max-height:30%;
+
+	z-index:2;
+
+	padding:6px;
+
+	overflow:hidden;
+
+	text-align:left;
+
+	font-size:8px;
+	color:#dddddd;
+	font-family:arial;
+
+	font-weight:bold;
+
+	text-shadow:2px 2px 2px #333333;
+
+	-moz-box-shadow:1px 1px 6px 1px #000000;
+	-webkit-box-shadow:1px 1px 6px 1px #000000;
+	-o-box-shadow:1px 1px 6px 1px #000000;
+	-khtml-box-shadow:1px 1px 6px 1px #000000;
+	box-shadow:1px 1px 6px 1px #000000;
+
+	border-top-left-radius:12px;
+	-moz-border-radius-topleft:12px;
+	-moz-border-top-left-radius:12px;
+	-webkit-border-top-left-radius:12px;
+	-khtml-border-top-left-radius:12px;
+
+	border-bottom-right-radius:12px;
+	-moz-border-radius-bottomright:12px;
+	-moz-border-bottom-right-radius:12px;
+	-webkit-border-bottom-right-radius:12px;
+	-khtml-border-bottom-right-radius:12px;
+
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";	
+}
+
+
+/* TD of list of winners: */
+#winners_list td
+{
+	text-align:left;
+
+	font-size:10px;
+	color:#dddddd;
+	font-family:arial;
+
+	text-shadow:2px 2px 2px #333333;
+}
+
+
+/* Winners list title: */
+#winners_list_title
+{
+	text-align:center;
+	font-size:12px;
+	color:#00ffaa;
+	font-weight:bold;
+	padding-top:3px;
+	padding-bottom:5px;
+}
+
+
+/* Name of each winner on the winner list: */
+.winners_list_name
+{
+	color:#ffff00;
+	font-size:8px;
+}
+
+/* Prize name of each winner on the winner list: */
+.winners_list_prize_name
+{
+	color:#aaff00;
+	font-weight:bold;
+	font-size:10px;
+}
+
+
+/* Message to indicate that the player is in that position of the queue: */
+#queue_you_are_here
+{
+	position:absolute;
+	color:#ff00ff;
+	font-family:arial;
+	font-weight:bold;
+	text-shadow:2px 2px 2px #666666;
+	z-index:5;
+	transition:all 300ms;
+	-moz-transition:all 300ms;
+	-webkit-transition:all 300ms;
+	-o-transition:all 300ms;
+	-khtml-transition:all 300ms;
+	-ms-transition:all 300ms;
+}
+
+
+#queue_you_are_here.alternative_class
+{
+	color:#00ff00;
+	text-shadow:2px 2px 2px #ffffff;
+	font-weight:normal;
+	transition:all 300ms;
+	-moz-transition:all 300ms;
+	-webkit-transition:all 300ms;
+	-o-transition:all 300ms;
+	-khtml-transition:all 300ms;
+	-ms-transition:all 300ms;
+}
+
+
+/* Container that holds a male: */
+.person_container_male
+{
+	position:absolute;
+	
+	width:4%;
+	height:14%;
+
+	z-index:3;
+}
+
+
+/* Container that holds a female: */
+.person_container_female
+{
+	position:absolute;
+	
+	width:5%;
+	height:16%;
+
+	z-index:4;
+}
+
+
+
+/* Container that holds a person: */
+.appearing
+{
+	filter:alpha(opacity=0);
+	opacity:0;
+	-moz-opacity:0;
+	-khtml-opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Container that holds a person: */
+.appeared
+{
+	filter:alpha(opacity=100);
+	opacity:1;
+	-moz-opacity:1;
+	-khtml-opacity:1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+
+/* Image of a person (male and female): */
+.person_image_male, .person_image_female
+{
+	width:100%;
+	height:100%;
+}
+
+
+/* Container that holds the user (male): */
+#person_container_0
+{
+	position:absolute;
+	
+	width:4%;
+	height:14%;
+
+	z-index:3;
+}
+
+
+/* Container that holds the user (female): */
+#person_container_1
+{
+	position:absolute;
+	
+	width:5%;
+	height:16%;
+
+	z-index:4;
+}
+
+
+/* Image of the user (male): */
+#person_image_0
+{
+	width:100%;
+	height:100%;
+}
+
+
+/* Image of the user (female): */
+#person_image_1
+{
+	width:100%;
+	height:100%;
+}
+
+
+/* Lottery screen (when someone is finalist): */
+#lottery_room_screen
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:red;
+	z-index:3;
+
+	overflow:hidden;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+#lottery_room_screen.screen_hidden
+{
+	left:-100%;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Container for male finalist: */
+#finalist_male
+{
+	position:absolute;
+
+	width:20%;
+	height:65%;
+
+	left:12%;
+	top:22%;
+
+	z-index:2;
+}
+
+
+/* Container for female finalist: */
+#finalist_female
+{
+	position:absolute;
+
+	width:20%;
+	height:65%;
+
+	left:69%;
+	top:22%;
+
+	z-index:2;
+}
+
+
+/* Image of male and female finalists: */
+#finalist_male_image, #finalist_female_image, #finalist_male_happy_image, #finalist_female_happy_image, #finalist_male_sad_image, #finalist_female_sad_image, #finalist_male_unknown_image, #finalist_female_unknown_image
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+
+	width:100%;
+	height:100%;
+}
+
+
+/* Container for male roulette: */
+#roulette_male, #roulette_male_clickable
+{
+	position:absolute;
+
+	width:10%;
+	height:17.4%;
+
+	left:35.5%;
+	top:25%;
+
+	z-index:5;
+
+	transform:scale(1) rotate(0deg);
+	-o-transform:scale(1) rotate(0deg);
+	-ms-transform:scale(1) rotate(0deg);
+	-khtml-transform:scale(1) rotate(0deg);
+	-webkit-transform:scale(1) rotate(0deg);
+}
+
+
+/* Clickable roulettes for both male and female: */
+#roulette_male_clickable, #roulette_female_clickable
+{
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+/* Container for female roulette: */
+#roulette_female, #roulette_female_clickable
+{
+	position:absolute;
+
+	width:10%;
+	height:17.4%;
+
+	left:55%;
+	top:25%;
+
+	z-index:5;
+
+	transform:scale(1) rotate(0deg);
+	-o-transform:scale(1) rotate(0deg);
+	-ms-transform:scale(1) rotate(0deg);
+	-khtml-transform:scale(1) rotate(0deg);
+	-webkit-transform:scale(1) rotate(0deg);
+}
+
+
+
+#roulette_male.spinning, #roulette_female.spinning, #roulette_male_clickable.spinning, #roulette_female_clickable.spinning
+{
+	transform:scale(0.9) rotate(36000deg);
+	-o-transform:scale(0.9) rotate(36000deg);
+	-ms-transform:scale(0.9) rotate(36000deg);
+	-khtml-transform:scale(0.9) rotate(36000deg);
+	-webkit-transform:scale(0.9) rotate(36000deg);
+
+	transition:all 1500ms ease-out;
+	-moz-transition:all 1500ms ease-out;
+	-webkit-transition:all 1500ms ease-out;
+	-o-transition:all 1500ms ease-out;
+	-khtml-transition:all 1500ms ease-out;
+	-ms-transition:all 1500ms ease-out;
+}
+
+
+/* Image for male and female roulette: */
+#roulette_male_image, #roulette_female_image, #roulette_male_image_clickable, #roulette_female_image_clickable
+{
+	width:100%;
+	height:100%;
+}
+
+
+/* Lottery result for male and female: */
+#roulette_result_male, #roulette_result_female
+{
+	position:absolute;
+	border:1px solid blue;
+	background-color:orange;
+
+	width:26%;
+
+	padding:4px;
+
+	text-align:center;
+
+	font-size:14px;
+	color:#ffff00;
+	font-family:arial;
+
+	text-shadow:2px 2px 2px #666666;
+
+	z-index:5;
+
+	-moz-box-shadow:1px 1px 6px 1px #000000;
+	-webkit-box-shadow:1px 1px 6px 1px #000000;
+	-o-box-shadow:1px 1px 6px 1px #000000;
+	-khtml-box-shadow:1px 1px 6px 1px #000000;
+	box-shadow:1px 1px 6px 1px #000000;
+
+	border-top-left-radius:12px;
+	-moz-border-radius-topleft:12px;
+	-moz-border-top-left-radius:12px;
+	-webkit-border-top-left-radius:12px;
+	-khtml-border-top-left-radius:12px;
+
+	border-bottom-right-radius:12px;
+	-moz-border-radius-bottomright:12px;
+	-moz-border-bottom-right-radius:12px;
+	-webkit-border-bottom-right-radius:12px;
+	-khtml-border-bottom-right-radius:12px;
+
+
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+
+/* Lottery result for male: */
+#roulette_result_male
+{
+	top:53%;
+	left:8.5%;
+}
+
+
+/* Lottery result for female: */
+#roulette_result_female
+{
+	top:53%;
+	left:65.2%;
+}
+
+
+/* Icon with the result of the lottery (in the text): */
+ .lottery_result_icon
+{
+	width:20%;
+	height:7%;
+} 
+
+
+/* Container with the icon of the result of the lottery for male: */
+#roulette_result_icon_male
+{
+	position:absolute;
+	width:6%;
+	height:6%;
+	left:39.4%;
+	top:46%;
+	z-index:3;
+}
+
+
+/* Container with the icon of the result of the lottery for female: */
+#roulette_result_icon_female
+{
+	position:absolute;
+	width:6%;
+	height:6%;
+	left:56.8%;
+	top:46%;
+	z-index:3;
+}
+
+
+/* Icon with the result of the lottery: */
+ .lottery_result_icon_image
+{
+	width:100%;
+	height:100%;
+} 
+
+
+/* Button to play the lottery: */
+#roulette_play_button_male, #roulette_play_button_female
+{
+	cursor:pointer;
+
+	font-size:13px;
+	color:#ffff00;
+	font-family:arial;
+	font-weight:bold;
+
+	padding:4px;
+	margin:2px;
+
+	width:80%;
+	height:40px;
+
+	color:#bb0000;
+	background-color:#ffffff;
+	border:6px solid #000000;
+
+	border-top-left-radius:12px;
+	-moz-border-radius-topleft:12px;
+	-moz-border-top-left-radius:12px;
+	-webkit-border-top-left-radius:12px;
+	-khtml-border-top-left-radius:12px;
+
+	border-bottom-right-radius:12px;
+	-moz-border-radius-bottomright:12px;
+	-moz-border-bottom-right-radius:12px;
+	-webkit-border-bottom-right-radius:12px;
+	-khtml-border-bottom-right-radius:12px;
+}
+
+
+#roulette_play_button_male:hover, #roulette_play_button_female:hover
+{
+	background-color:#000000;
+	border:6px solid #ffffff;
+}
+
+
+/* Loser screen: */
+#loser_screen, #loser_screen table
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:5;
+
+	font-size:20px;
+	color:#333333;
+	font-family:arial;
+	font-weight:bold;
+
+	overflow:hidden;
+
+	filter:alpha(opacity=90);
+	opacity:0.9;
+	-moz-opacity:0.9;
+	-khtml-opacity:0.9;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Winner screen: */
+#winner_screen, #winner_screen table
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:5;
+
+	font-size:20px;
+	color:#696969;
+	font-family:arial;
+	font-weight:bold;
+
+	overflow:hidden;
+
+	filter:alpha(opacity=95);
+	opacity:0.95;
+	-moz-opacity:0.95;
+	-khtml-opacity:0.95;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Game finished screen: */
+#game_finished_screen, #game_finished_screen table
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:red;
+	z-index:6;
+
+	font-size:30px;
+	color:#ffff00;
+	font-family:arial;
+
+	overflow:hidden;
+
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	-moz-opacity:0.7;
+	-khtml-opacity:0.7;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+#loser_screen.screen_hidden, #winner_screen.screen_hidden
+{
+	top:-100%;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+#game_finished_screen.screen_hidden
+{
+	top:100%;
+
+	transition:all 1500ms;
+	-moz-transition:all 1500ms;
+	-webkit-transition:all 1500ms;
+	-o-transition:all 1500ms;
+	-khtml-transition:all 1500ms;
+	-ms-transition:all 1500ms;
+}
+
+
+/* Prize name: */
+.prize_name
+{
+	color:#000000;
+	font-style:italic;
+	text-shadow:2px 2px 2px #666666;
+}
+
+
+/* Prize name: */
+.prize_code
+{
+	color:#00aa00;
+	font-weight:bold;
+}
+
+
+/* Style for the code of the prizes: */
+.prize_1_code, .prize_2_code, .prize_3_code, .prize_4_code, .prize_5_code, .prize_6_code
+{
+	font-size:16px;
+	font-family:arial;
+	font-weight:bold;
+	color:#0000aa;
+	text-shadow:2px 2px 2px #666666;
+}
+
+
+/* Container with the shop selector: */
+#shop_selector_container, #shop_selector_losers_container
+{
+	font-size:20px;
+	font-family:arial;
+	font-weight:bold;
+	color:#000000;
+	text-shadow:2px 2px 2px #666666;
+}
+
+
+/* City and shop select list: */
+.shop_selector
+{
+	background-color:#76fbfe;
+	font-size:12px;
+	font-family:verdana;
+	color:#000000;
+	border:1px solid #0000aa;
+	height:30px;
+	padding:6px;
+}
+
+.shop_selector:hover
+{
+	background-color:#ff66cc;
+}
+
+
+
+/* Button for shop selector: */
+.shop_selector_button
+{
+	color:#000000;
+	font-family:verdana;
+	font-size:12px;
+	height:30px;
+	border:1px solid #cc55aa;
+	background-color:#ffaabb;
+	padding:6px;
+
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+.shop_selector_button:hover
+{
+	background-color:#ff66cc;
+}
+
+
+/* Shop information: */
+.shop_information
+{
+	font-size:18px;
+	font-family:verdana;
+	color:#333333;
+	font-weight:bold;
+}
+
+
+/* Container for introduce the code to mark the prize as given: */
+.prize_given_code_container
+{
+	font-size:18px;
+	font-family:verdana;
+	color:#ffffff;
+}
+
+/* Shop name, address and telephone shown on the container to mark the prize as given: */
+.prize_given_shop_name, .prize_given_shop_address, .prize_given_shop_telephone
+{
+	color:#000000;
+	font-weight:bold;
+}
+
+
+/* Text before the input for the code to mark the prize as given: */
+.seller_code_text
+{
+	color:#eebbff;
+	font-weight:bold;
+	text-shadow:2px 2px 2px #666666;
+}
+
+
+/* Input to introduce the code to mark the prize as given: */
+.prize_given_code_input
+{
+	background-color:#aa11dd;
+	font-size:12px;
+	font-family:verdana;
+	color:#ffffff;
+	border:1px solid #0000aa;
+	padding:6px;
+}
+
+.prize_given_code_input:hover
+{
+	background-color:#ff66cc;
+}
+
+
+/* Button to mark the prize as given: */
+.prize_given_button
+{
+	color:#000000;
+	font-family:verdana;
+	font-size:12px;
+	height:30px;
+	border:1px solid #cc55aa;
+	background-color:#ffaabb;
+	padding:6px;
+
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+.prize_given_button:hover
+{
+	background-color:#ff66cc;
+}
+
+
+/* Container to inform the prize has been taken: */
+#product_already_given_container
+{
+	color:#000000;
+	font-family:verdana;
+	font-size:18px;
+	font-weight:bold;
+}

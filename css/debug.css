@@ -1,0 +1,197 @@
+/*
+	Super Queue
+	* Chinese translation: 董双丽
+	* Graphics: 乔安
+	* Code: Joan Alba Maldonado
+*/
+
+
+/* DIV that holds the controls to allow hide or show all debug boxes: */
+#DEBUG_showHideboxes
+{
+	position:fixed;
+	left:0px;
+	top:0px;
+	
+	border:2px solid #aaaa00;
+	background-color:#aaaa00;
+
+	padding:2px;
+
+	font-size:10px;
+	color:#ffffff;
+	font-family:terminal, arial;
+
+	z-index:10;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+
+#DEBUG_showHideboxes.hidden
+{
+	color:#666666;
+	border:2px dotted #aaaa00;
+
+	filter:alpha(opacity=30);
+	opacity:0.3;
+	-moz-opacity:0.3;
+	-khtml-opacity:0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+
+#DEBUG_showHideboxes button
+{
+	font-size:9px;
+	cursor:pointer;
+}
+
+
+/* DIV for displaying game data (in debug mode): */
+#DEBUG_game_data
+{
+	position:fixed;
+	right:8px;
+	bottom:8px;
+	width:30%;
+	
+	border:2px solid #aaaa00;
+	background-color:#aa0000;
+
+	padding:2px;
+
+	font-size:10px;
+	color:#ffffff;
+	font-family:terminal, arial;
+
+	z-index:10;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+#DEBUG_game_data.hidden
+{
+	color:#666666;
+	border:2px dotted #aaaa00;
+
+	filter:alpha(opacity=30);
+	opacity:0.3;
+	-moz-opacity:0.3;
+	-khtml-opacity:0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+
+.DEBUG_game_data_option
+{
+	text-align:center;
+	color:#ffff00;
+	font-weight:bold;
+}
+
+
+.DEBUG_game_data_option:hover
+{
+	color:#00ffff;
+	cursor:hand;
+	cursor:pointer;
+}
+
+
+/* DIV for displaying game state (in debug mode): */
+#DEBUG_game_state
+{
+	position:fixed;
+	right:8px;
+	top:8px;
+	width:30%;
+	
+	border:2px solid #aaaa00;
+	background-color:#0000aa;
+
+	padding:2px;
+
+	font-size:10px;
+	color:#ffffff;
+	font-family:terminal, arial;
+
+	z-index:10;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+#DEBUG_game_state.hidden
+{
+	color:#666666;
+	border:2px dotted #aaaa00;
+
+	filter:alpha(opacity=30);
+	opacity:0.3;
+	-moz-opacity:0.3;
+	-khtml-opacity:0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+
+/* DIV for displaying game God controls (in debug mode): */
+#DEBUG_game_god_controls
+{
+	position:fixed;
+	left:8px;
+	bottom:8px;
+	width:50%;
+	
+	border:2px solid #aaaa00;
+	background-color:#00aa00;
+
+	padding:15px;
+
+	font-size:10px;
+	color:#ffffff;
+	font-family:terminal, arial;
+
+	z-index:10;
+
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	-moz-opacity:0.8;
+	-khtml-opacity:0.8;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+#DEBUG_game_god_controls.hidden
+{
+	color:#666666;
+	border:2px dotted #aaaa00;
+
+	filter:alpha(opacity=30);
+	opacity:0.3;
+	-moz-opacity:0.3;
+	-khtml-opacity:0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+}
+
+
+/* Inputs in game God controls: */
+#DEBUG_game_god_controls input, #DEBUG_game_god_controls select
+{
+	font-size:10px;
+}
+
+#DEBUG_game_god_controls input:hover, #DEBUG_game_god_controls select:hover
+{
+	background-color:#00aa00;
+}

@@ -1,0 +1,7 @@
+// Super Queue
+// * Chinese translation: 董双丽
+// * Graphics: 乔安
+// * Code: Joan Alba Maldonado
+
+
+* Al mostrar el teclado para introducir el nombre de usuario o password en iPad, el fondo se ve blanco.
