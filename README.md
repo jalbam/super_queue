@@ -1,10 +1,11 @@
-Super Queue
-============ by Joan Alba Maldonado (granvino@granvino.com)
+Super Queue 
+============ 
+by Joan Alba Maldonado (joanalbamaldonadoNO_SPAM_PLEASE AT gmail DOT com, without NO_SPAM_PLEASE)
 
 Queue and lotery game totally written in PHP and DHTML.
 
-Version: final version
-Date: 7th November 2014 (approximately).
+Version: final version 
+- Date: 7th November 2014 (approximately).
 
 
 Description
