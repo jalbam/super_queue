@@ -11,7 +11,7 @@ Version: final version
 ![ScreenShots](screenshots.jpg)
 
 
-Description
+## Description
 
 I made this game for a Chinese software company whose final client was a chain of jewelry stores that wanted a Weixin (aka WeChat) game to promote themselves by giving the players some prizes and coupons just during a week (to celebrate the Chinese Single's day, the 11th of November). Weixin (WeChat) is the most used instant messaging client for mobile devices in China, made by Tencent (the same company that also owns QQ).
 
