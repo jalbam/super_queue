@@ -41,4 +41,7 @@ This game was made using technologies as HTML, CSS / CSS 3, JavaScript, JSON, XH
 
 You can try the game by yourself just creating the database needed (a SQL file with the required tables is included) and editing the configuration file to use that database. Basically, you just need a web server that supports PHP and mySQL.
 
+
+## License
+
 Forbidden to use without keeping the authors' name and copyright clauses. For non-commercial purposes only (unless you contact me and pay for a license).
