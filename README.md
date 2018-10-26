@@ -15,7 +15,7 @@ Version: final version
 
 I made this game for a Chinese software company whose final client was a chain of jewelry stores that wanted a Weixin (aka WeChat) game to promote themselves by giving the players some prizes and coupons just during a week (to celebrate the Chinese Single's day, the 11th of November). Weixin (WeChat) is the most used instant messaging client for mobile devices in China, made by Tencent (the same company that also owns QQ).
 
-The graphics are made by 乔安 (Qiao An) and Chinese translation is done by 董双丽 (Dong Shuangli). The development took almost a month.
+The graphics are made by 乔安 (Qiao An) and Chinese translation is done by 董双丽 (Dong Shuangli). The development took almost one month.
 
 The game consists of two levels. In the first level, you are waiting in a queue and your mission is to jump the queue until you can enter the door. Once you enter through the door, the second level consists in waiting for a partner of the opposite gender (it can be either a real player or a fake one if the game is configured to use fake players or the admin force it) and, when you get a partner, then each of you have to spin a roulette wheel with zodiac symbols and both will win a prize if you both get the same zodiac symbol. If you get a different symbol, you get a discount coupon instead.
 
