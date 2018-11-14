@@ -2,7 +2,7 @@ Super Queue
 ============ 
 by Joan Alba Maldonado (joanalbamaldonadoNO_SPAM_PLEASE AT gmail DOT com, without NO_SPAM_PLEASE)
 
-Queue and lotery game totally written in PHP and DHTML.
+Queue and lottery viral game totally written in PHP and DHTML.
 
 Version: final version 
 - Date: 7th November 2014 (approximately).
