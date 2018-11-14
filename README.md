@@ -37,7 +37,7 @@ There is a debug mode which can be accessed through a password. That debug mode 
 
 It also includes an overload test page to check server limits.
 
-This game was made using technologies as HTML, CSS / CSS 3, JavaScript, JSON, XHR (AJAX), PHP, mySQL, RPC (Remote Procedure Call), OpenID, OAuth, [Weixin API](https://developers.weixin.qq.com/miniprogram/dev/api/) ([WeChat API](admin.wechat.com/wiki/index.php?title=API_Introduction)) / [WeixinJSBridge](https://github.com/Tencent/weui/wiki/%E5%BE%AE%E4%BF%A1JSAPI), etc.
+This game was made using technologies as HTML, CSS / CSS 3, JavaScript, JSON, XHR (AJAX), PHP, mySQL, RPC (Remote Procedure Call), OpenID, OAuth, [Weixin API](https://developers.weixin.qq.com/miniprogram/dev/api/) ([WeChat API](http://admin.wechat.com/wiki/index.php?title=API_Introduction)) / [WeixinJSBridge](https://github.com/Tencent/weui/wiki/%E5%BE%AE%E4%BF%A1JSAPI), etc.
 
 You can try the game by yourself just creating the database needed (a SQL file with the required tables is included) and editing the configuration file to use that database. Basically, you just need a web server that supports PHP and mySQL.
 
