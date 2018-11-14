@@ -13,7 +13,7 @@ Version: final version
 
 ## Description
 
-I made this game for a Chinese software company whose final client was a chain of jewelry stores that wanted a Weixin (aka WeChat) game to promote themselves by giving the players some prizes and coupons just during a week (to celebrate the Chinese Single's day, the 11th of November). Weixin (WeChat) is the most used instant messaging client for mobile devices in China, made by Tencent (the same company that also owns QQ).
+I made this game for a Chinese software company whose final client was a chain of jewelry stores that wanted a [Weixin (aka WeChat)](https://es.wikipedia.org/wiki/WeChat) game to promote themselves by giving the players some prizes and coupons just during a week (to celebrate the [Chinese Single's day](https://en.wikipedia.org/wiki/Singles%27_Day), the 11th of November). [Weixin (WeChat)](https://es.wikipedia.org/wiki/WeChat) is the most used instant messaging client for mobile devices in China, made by [Tencent](https://en.wikipedia.org/wiki/Tencent) (the same company that also owns [QQ](https://es.wikipedia.org/wiki/QQ)).
 
 The graphics are made by 乔安 (Qiao An) and Chinese translation is done by 董双丽 (Dong Shuangli). The development took almost one month.
 
@@ -31,13 +31,13 @@ The game already includes Chinese and English languages. There is also a localiz
 
 The company wanted to run the game just for a week. During this week, the game was a complete success and had more than 50,000 players. All prizes were given out.
 
-The game was running on Weixin (WeChat) and uses some of its functions, but it can be configured without effort to be used in any other app or platform (as for example in QQ, Facebook or any web browser with JavaScript and CSS enabled).
+The game was running on [Weixin (WeChat)](https://es.wikipedia.org/wiki/WeChat) and uses some of its functions, but it can be configured without effort to be used in any other app or platform (as for example in [QQ](https://es.wikipedia.org/wiki/QQ), Facebook or any web browser with JavaScript and CSS enabled).
 
 There is a debug mode which can be accessed through a password. That debug mode shows useful information about the game in real time and it also provides an admin control panel (similar to a God mode panel) with many options to cheat, control other players, etc.
 
 It also includes an overload test page to check server limits.
 
-This game was made using technologies as HTML, CSS / CSS 3, JavaScript, JSON, XHR (AJAX), PHP, mySQL, RPC (Remote Procedure Call), OpenID, OAuth, Weixin API (WeChat API) / WeixinJSBridge, etc.
+This game was made using technologies as HTML, CSS / CSS 3, JavaScript, JSON, XHR (AJAX), PHP, mySQL, RPC (Remote Procedure Call), OpenID, OAuth, [Weixin API](https://developers.weixin.qq.com/miniprogram/dev/api/) ([WeChat API](admin.wechat.com/wiki/index.php?title=API_Introduction)) / [WeixinJSBridge](https://github.com/Tencent/weui/wiki/%E5%BE%AE%E4%BF%A1JSAPI), etc.
 
 You can try the game by yourself just creating the database needed (a SQL file with the required tables is included) and editing the configuration file to use that database. Basically, you just need a web server that supports PHP and mySQL.
 
